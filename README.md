@@ -53,3 +53,5 @@ Esta estructura es especialmente problemática porque:
 - Al heredar de AguasNormales en lugar de directamente de Agua, el cambio de comportamiento parece más inocente pero es igualmente peligroso.
 
 Esta violación muestra claramente por qué el Principio de Sustitución de Liskov debe considerarse a lo largo de toda la cadena de herencia, no solo en la relación de una clase con su padre inmediato.
+
+> [¿Qué hacer?](queHacer.md)
