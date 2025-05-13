@@ -17,41 +17,41 @@ public class Mundo {
 
         for (int y = 0; y < alto; y++) {
             for (int x = 0; x < ancho; x++) {
-                mapa[y][x] = new Suelo();
+                mapa[y][x] = TerrenoFactory.crearSuelo();
             }
         }
 
         for (int x = 0; x < ancho; x++) {
-            mapa[alto / 2 - 1][x] = new AguasNormales();
-            mapa[alto / 2][x] = new AguasNormales();
-            mapa[alto / 2 + 1][x] = new AguasNormales();
+            mapa[alto / 2 - 1][x] = TerrenoFactory.crearAguasNormales();
+            mapa[alto / 2 - 0][x] = TerrenoFactory.crearAguasNormales();
+            mapa[alto / 2 + 1][x] = TerrenoFactory.crearAguasNormales();
         }
 
-        mapa[alto / 2 - 1][3] = new AguasPutridas();        mapa[alto / 2 - 1][4] = new AguasPutridas();        mapa[alto / 2 - 1][5] = new AguasTurbulentas();        mapa[alto / 2 - 1][6] = new AguasTurbulentas();mapa[alto / 2 - 1][7] = new AguasRapidas();mapa[alto / 2 - 1][8] = new AguasRapidas();mapa[alto / 2 - 1][9] = new AguasRapidas();
-        mapa[alto / 2 - 0][3] = new AguasPutridas();        mapa[alto / 2 - 0][4] = new AguasPutridas();        mapa[alto / 2 - 0][5] = new AguasTurbulentas();        mapa[alto / 2 - 0][6] = new AguasTurbulentas();mapa[alto / 2 - 0][7] = new AguasRapidas();mapa[alto / 2 - 0][8] = new AguasRapidas();mapa[alto / 2 - 0][9] = new AguasRapidas();
-        mapa[alto / 2 + 1][3] = new AguasPutridas();        mapa[alto / 2 + 1][4] = new AguasPutridas();        mapa[alto / 2 + 1][5] = new AguasTurbulentas();        mapa[alto / 2 + 1][6] = new AguasTurbulentas();mapa[alto / 2 + 1][7] = new AguasRapidas();mapa[alto / 2 + 1][8] = new AguasRapidas();mapa[alto / 2 + 1][9] = new AguasRapidas();
+        mapa[alto / 2 - 1][3] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 1][4] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 1][5] = TerrenoFactory.crearAguasTurbulentas();        mapa[alto / 2 - 1][6] = TerrenoFactory.crearAguasTurbulentas();mapa[alto / 2 - 1][7] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 1][8] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 1][9] = TerrenoFactory.crearAguasRapidas();
+        mapa[alto / 2 - 0][3] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 0][4] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 0][5] = TerrenoFactory.crearAguasTurbulentas();        mapa[alto / 2 - 0][6] = TerrenoFactory.crearAguasTurbulentas();mapa[alto / 2 - 0][7] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 0][8] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 0][9] = TerrenoFactory.crearAguasRapidas();
+        mapa[alto / 2 + 1][3] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 + 1][4] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 + 1][5] = TerrenoFactory.crearAguasTurbulentas();        mapa[alto / 2 + 1][6] = TerrenoFactory.crearAguasTurbulentas();mapa[alto / 2 + 1][7] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 + 1][8] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 + 1][9] = TerrenoFactory.crearAguasRapidas();
 
         for (int x = 2; x < ancho; x++) {
-            mapa[2][x] = new Montanas();
+            mapa[2][x] = TerrenoFactory.crearMontanas();
         }
 
         for (int y = alto - 3; y < alto; y++) {
             for (int x = 0; x < ancho; x++) {
                 if (x % 3 == 0)
-                    mapa[y][x] = new CespedBajo();
+                    mapa[y][x] = TerrenoFactory.crearCespedBajo();
                 else if (x % 3 == 1)
-                    mapa[y][x] = new CespedMedio();
+                    mapa[y][x] = TerrenoFactory.crearCespedMedio();
                 else
-                    mapa[y][x] = new CespedAlto();
+                    mapa[y][x] = TerrenoFactory.crearCespedAlto();
             }
         }
 
-        mapa[0][0] = new Paredes();
-        mapa[0][1] = new Paredes();
-        mapa[0][2] = new Paredes();
-        mapa[0][3] = new Paredes();
-        mapa[1][0] = new Paredes();
-        mapa[1][3] = new Paredes();
+        mapa[0][0] = TerrenoFactory.crearParedes();
+        mapa[0][1] = TerrenoFactory.crearParedes();
+        mapa[0][2] = TerrenoFactory.crearParedes();
+        mapa[0][3] = TerrenoFactory.crearParedes();
+        mapa[1][0] = TerrenoFactory.crearParedes();
+        mapa[1][3] = TerrenoFactory.crearParedes();
     }
 
     public void agregarJugador(int x, int y) {

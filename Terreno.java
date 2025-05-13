@@ -1,18 +1,23 @@
-public abstract class Terreno {
-    protected char simbolo;
-    protected String color;
-    protected boolean transitable;
-    protected double factorVelocidad;
+public class Terreno {
+    private final char simbolo;
+    private final String color;
+    private final double factorVelocidad;
+    private final EstrategiaTransitabilidad estrategiaTransitabilidad;
     
-    public Terreno(char simbolo, String color, boolean transitable, double factorVelocidad) {
+    public Terreno(char simbolo, String color, double factorVelocidad, 
+                  EstrategiaTransitabilidad estrategiaTransitabilidad) {
         this.simbolo = simbolo;
         this.color = color;
-        this.transitable = transitable;
         this.factorVelocidad = factorVelocidad;
+        this.estrategiaTransitabilidad = estrategiaTransitabilidad;
     }
     
     public boolean esTransitable() {
-        return transitable;
+        return estrategiaTransitabilidad.esTransitable();
+    }
+    
+    public boolean puedeSerRecorridoPor(MedioTransporte medio) {
+        return estrategiaTransitabilidad.puedeSerRecorridoPor(medio);
     }
     
     public double obtenerFactorVelocidad() {
@@ -26,6 +31,4 @@ public abstract class Terreno {
     public String getColor() {
         return color;
     }
-    
-    public abstract boolean puedeSerRecorridoPor(MedioTransporte medio);
 }
