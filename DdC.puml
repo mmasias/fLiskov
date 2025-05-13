@@ -1,0 +1,30 @@
+@startuml
+
+enum MedioTransporte
+
+PyMundoDemo -d-> Mundo 
+PyMundoDemo .d.> Console
+Mundo *--d-> Terreno
+Mundo o-l-> Jugador
+Jugador -r-> MedioTransporte 
+Terreno ..> MedioTransporte
+
+
+abstract Terreno
+abstract Cesped
+abstract Agua
+
+Suelo -u-|> Terreno
+Arena -u-|> Terreno
+Paredes -u-|> Terreno
+Cesped -u-|> Terreno
+Agua -u-|> Terreno
+
+CespedBajo -u-|> Cesped
+CespedMedio -u-|> Cesped
+CespedAlto -u-|> Cesped
+
+AguasNormales -u-|> Agua
+AguasTurbulentas -u-|> Agua
+
+@enduml
