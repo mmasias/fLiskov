@@ -27,5 +27,6 @@ CespedAlto -u-|> Cesped
 AguasNormales -u-|> Agua
 AguasTurbulentas -u-|> Agua
 AguasPutridas -u-|> Agua
+AguasRapidas -u-|> AguasNormales
 
 @enduml

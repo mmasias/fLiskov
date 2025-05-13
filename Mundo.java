@@ -27,9 +27,9 @@ public class Mundo {
             mapa[alto / 2 + 1][x] = new AguasNormales();
         }
 
-        mapa[alto / 2 - 1][3] = new AguasPutridas();        mapa[alto / 2 - 1][4] = new AguasPutridas();        mapa[alto / 2 - 1][5] = new AguasTurbulentas();        mapa[alto / 2 - 1][6] = new AguasTurbulentas();
-        mapa[alto / 2 - 0][3] = new AguasPutridas();        mapa[alto / 2 - 0][4] = new AguasPutridas();        mapa[alto / 2 - 0][5] = new AguasTurbulentas();        mapa[alto / 2 - 0][6] = new AguasTurbulentas();
-        mapa[alto / 2 + 1][3] = new AguasPutridas();        mapa[alto / 2 + 1][4] = new AguasPutridas();        mapa[alto / 2 + 1][5] = new AguasTurbulentas();        mapa[alto / 2 + 1][6] = new AguasTurbulentas();
+        mapa[alto / 2 - 1][3] = new AguasPutridas();        mapa[alto / 2 - 1][4] = new AguasPutridas();        mapa[alto / 2 - 1][5] = new AguasTurbulentas();        mapa[alto / 2 - 1][6] = new AguasTurbulentas();mapa[alto / 2 - 1][7] = new AguasRapidas();mapa[alto / 2 - 1][8] = new AguasRapidas();mapa[alto / 2 - 1][9] = new AguasRapidas();
+        mapa[alto / 2 - 0][3] = new AguasPutridas();        mapa[alto / 2 - 0][4] = new AguasPutridas();        mapa[alto / 2 - 0][5] = new AguasTurbulentas();        mapa[alto / 2 - 0][6] = new AguasTurbulentas();mapa[alto / 2 - 0][7] = new AguasRapidas();mapa[alto / 2 - 0][8] = new AguasRapidas();mapa[alto / 2 - 0][9] = new AguasRapidas();
+        mapa[alto / 2 + 1][3] = new AguasPutridas();        mapa[alto / 2 + 1][4] = new AguasPutridas();        mapa[alto / 2 + 1][5] = new AguasTurbulentas();        mapa[alto / 2 + 1][6] = new AguasTurbulentas();mapa[alto / 2 + 1][7] = new AguasRapidas();mapa[alto / 2 + 1][8] = new AguasRapidas();mapa[alto / 2 + 1][9] = new AguasRapidas();
 
         for (int x = 2; x < ancho; x++) {
             mapa[2][x] = new Montanas();
