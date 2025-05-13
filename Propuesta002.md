@@ -14,6 +14,7 @@ Esta evolución nos permite pasar de un enfoque estático y cerrado a uno dinám
 - [RegistroTerrenos](RegistroTerrenos.java) se encarga solo del mecanismo de registro.
 - [TerrenosEstandar](TerrenosEstandar.java) contiene los terrenos básicos del juego.
 - [TerrenosEspeciales](TerrenosEspeciales.java) contiene terrenos más experimentales o especiales.
+- [RegistroTerrenosExtendido](RegistroTerrenosExtendido.java) carga ahora registros nuevos o premium!!!
 
 ## Diferencias clave
 

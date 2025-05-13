@@ -51,7 +51,16 @@ public class Mundo {
         mapa[0][2] = RegistroTerrenos.crearTerreno("PAREDES");
         mapa[0][3] = RegistroTerrenos.crearTerreno("PAREDES");
         mapa[1][0] = RegistroTerrenos.crearTerreno("PAREDES");
-        mapa[1][3] = RegistroTerrenos.crearTerreno("PAREDES");       
+        mapa[1][3] = RegistroTerrenos.crearTerreno("PAREDES");
+
+        mapa[2][2] = RegistroTerrenos.crearTerreno("LAVA");
+        mapa[2][3] = RegistroTerrenos.crearTerreno("LAVA");
+        
+        for (int x = 2; x < 5; x++) {
+            for (int y = alto-5; y < alto-3; y++) {
+                mapa[y][x] = RegistroTerrenos.crearTerreno("PANTANO");
+            }
+        }         
     }
 
     public void agregarJugador(int x, int y) {

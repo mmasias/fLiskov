@@ -3,6 +3,7 @@ public class PyMundoDemo {
 
         TerrenosEstandar.inicializar();
         TerrenosEspeciales.inicializar();
+        RegistroTerrenosExtendido.inicializar();
         
         Console console = new Console();
         Mundo mundo = new Mundo(30, 15);
