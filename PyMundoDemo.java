@@ -1,6 +1,9 @@
 public class PyMundoDemo {
     public static void main(String[] args) {
 
+        TerrenosEstandar.inicializar();
+        TerrenosEspeciales.inicializar();
+        
         Console console = new Console();
         Mundo mundo = new Mundo(30, 15);
 

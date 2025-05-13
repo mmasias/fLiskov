@@ -17,41 +17,41 @@ public class Mundo {
 
         for (int y = 0; y < alto; y++) {
             for (int x = 0; x < ancho; x++) {
-                mapa[y][x] = TerrenoFactory.crearSuelo();
+                mapa[y][x] = RegistroTerrenos.crearTerreno("SUELO");
             }
         }
 
         for (int x = 0; x < ancho; x++) {
-            mapa[alto / 2 - 1][x] = TerrenoFactory.crearAguasNormales();
-            mapa[alto / 2 - 0][x] = TerrenoFactory.crearAguasNormales();
-            mapa[alto / 2 + 1][x] = TerrenoFactory.crearAguasNormales();
+            mapa[alto / 2 - 1][x] = RegistroTerrenos.crearTerreno("AGUAS_NORMALES");
+            mapa[alto / 2 - 0][x] = RegistroTerrenos.crearTerreno("AGUAS_NORMALES");
+            mapa[alto / 2 + 1][x] = RegistroTerrenos.crearTerreno("AGUAS_NORMALES");
         }
 
-        mapa[alto / 2 - 1][3] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 1][4] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 1][5] = TerrenoFactory.crearAguasTurbulentas();        mapa[alto / 2 - 1][6] = TerrenoFactory.crearAguasTurbulentas();mapa[alto / 2 - 1][7] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 1][8] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 1][9] = TerrenoFactory.crearAguasRapidas();
-        mapa[alto / 2 - 0][3] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 0][4] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 - 0][5] = TerrenoFactory.crearAguasTurbulentas();        mapa[alto / 2 - 0][6] = TerrenoFactory.crearAguasTurbulentas();mapa[alto / 2 - 0][7] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 0][8] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 - 0][9] = TerrenoFactory.crearAguasRapidas();
-        mapa[alto / 2 + 1][3] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 + 1][4] = TerrenoFactory.crearAguasPutridas();        mapa[alto / 2 + 1][5] = TerrenoFactory.crearAguasTurbulentas();        mapa[alto / 2 + 1][6] = TerrenoFactory.crearAguasTurbulentas();mapa[alto / 2 + 1][7] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 + 1][8] = TerrenoFactory.crearAguasRapidas();mapa[alto / 2 + 1][9] = TerrenoFactory.crearAguasRapidas();
+        mapa[alto / 2 - 1][3] = RegistroTerrenos.crearTerreno("AGUAS_PUTRIDAS");        mapa[alto / 2 - 1][4] = RegistroTerrenos.crearTerreno("AGUAS_PUTRIDAS");        mapa[alto / 2 - 1][5] = RegistroTerrenos.crearTerreno("AGUAS_TURBULENTAS");        mapa[alto / 2 - 1][6] = RegistroTerrenos.crearTerreno("AGUAS_TURBULENTAS");  mapa[alto / 2 - 1][7] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS"); mapa[alto / 2 - 1][8] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS"); mapa[alto / 2 - 1][9] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS");
+        mapa[alto / 2 - 0][3] = RegistroTerrenos.crearTerreno("AGUAS_PUTRIDAS");        mapa[alto / 2 - 0][4] = RegistroTerrenos.crearTerreno("AGUAS_PUTRIDAS");        mapa[alto / 2 - 0][5] = RegistroTerrenos.crearTerreno("AGUAS_TURBULENTAS");        mapa[alto / 2 - 0][6] = RegistroTerrenos.crearTerreno("AGUAS_TURBULENTAS");  mapa[alto / 2 - 0][7] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS"); mapa[alto / 2 - 0][8] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS"); mapa[alto / 2 - 0][9] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS");
+        mapa[alto / 2 + 1][3] = RegistroTerrenos.crearTerreno("AGUAS_PUTRIDAS");        mapa[alto / 2 + 1][4] = RegistroTerrenos.crearTerreno("AGUAS_PUTRIDAS");        mapa[alto / 2 + 1][5] = RegistroTerrenos.crearTerreno("AGUAS_TURBULENTAS");        mapa[alto / 2 + 1][6] = RegistroTerrenos.crearTerreno("AGUAS_TURBULENTAS");  mapa[alto / 2 + 1][7] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS"); mapa[alto / 2 + 1][8] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS"); mapa[alto / 2 + 1][9] = RegistroTerrenos.crearTerreno("AGUAS_RAPIDAS");
 
         for (int x = 2; x < ancho; x++) {
-            mapa[2][x] = TerrenoFactory.crearMontanas();
+            mapa[2][x] = RegistroTerrenos.crearTerreno("MONTANAS");
         }
 
         for (int y = alto - 3; y < alto; y++) {
             for (int x = 0; x < ancho; x++) {
                 if (x % 3 == 0)
-                    mapa[y][x] = TerrenoFactory.crearCespedBajo();
+                    mapa[y][x] = RegistroTerrenos.crearTerreno("CESPED_BAJO");
                 else if (x % 3 == 1)
-                    mapa[y][x] = TerrenoFactory.crearCespedMedio();
+                    mapa[y][x] = RegistroTerrenos.crearTerreno("CESPED_MEDIO");
                 else
-                    mapa[y][x] = TerrenoFactory.crearCespedAlto();
+                    mapa[y][x] = RegistroTerrenos.crearTerreno("CESPED_ALTO");
             }
         }
 
-        mapa[0][0] = TerrenoFactory.crearParedes();
-        mapa[0][1] = TerrenoFactory.crearParedes();
-        mapa[0][2] = TerrenoFactory.crearParedes();
-        mapa[0][3] = TerrenoFactory.crearParedes();
-        mapa[1][0] = TerrenoFactory.crearParedes();
-        mapa[1][3] = TerrenoFactory.crearParedes();
+        mapa[0][0] = RegistroTerrenos.crearTerreno("PAREDES");
+        mapa[0][1] = RegistroTerrenos.crearTerreno("PAREDES");
+        mapa[0][2] = RegistroTerrenos.crearTerreno("PAREDES");
+        mapa[0][3] = RegistroTerrenos.crearTerreno("PAREDES");
+        mapa[1][0] = RegistroTerrenos.crearTerreno("PAREDES");
+        mapa[1][3] = RegistroTerrenos.crearTerreno("PAREDES");       
     }
 
     public void agregarJugador(int x, int y) {
