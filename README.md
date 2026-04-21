@@ -1,12 +1,12 @@
-# Mundillo
+# Mundillo — `propuesta001`
 
-<div align=center>
+El problema está identificado en [`queHacer.md`](queHacer.md). Esta rama implementa una primera propuesta: eliminar la jerarquía de herencia y sustituirla por composición con una estrategia de transitabilidad inyectada.
 
-![](/images/DdC.svg)
+¿Resuelve el problema? ¿Del todo?
 
-</div>
+[Propuesta001.md](Propuesta001.md)
 
-## xQ?
+---
 
 ### AguasPutridas
 
