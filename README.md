@@ -1,12 +1,12 @@
-# Mundillo
+# Mundillo — `propuesta002`
 
-<div align=center>
+La propuesta anterior resuelve LSP pero introduce otro problema. Esta rama lo aborda.
 
-![](/images/DdC.svg)
+¿Qué falla en la propuesta anterior y cómo lo resuelve esta?
 
-</div>
+[Propuesta002.md](Propuesta002.md)
 
-## xQ?
+---
 
 ### AguasPutridas
 
